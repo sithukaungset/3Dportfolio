@@ -1,10 +1,17 @@
 {
   "name": "three-demo",
+  "description": "Sithu Personal Website",
   "version": "0.0.0",
+  "author": "SithuKaungSet <sithukaungset27@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sithukaungset/sithukaungset.github.io/3Dportfolio"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "devDependencies": {
     "vite": "^2.3.0"
