@@ -5,7 +5,7 @@
   "author": "SithuKaungSet <sithukaungset27@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sithukaungset/sithukaungset.github.io/3Dportfolio"
+    "url": "https://sithukaungset.github.io/3Dportfolio/"
   },
   "scripts": {
     "dev": "vite --host",
