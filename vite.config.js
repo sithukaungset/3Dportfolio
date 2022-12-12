@@ -5,7 +5,7 @@ dns.setDefaultResultOrder('verbatim')
 
 export default defineConfig({
   // omit
-  base: "/3Dportfolio/",
+  base: "/3Dportfolio/"
 
 	
 })
