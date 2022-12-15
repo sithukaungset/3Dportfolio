@@ -11,7 +11,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dis"
   },
   "devDependencies": {
     "vite": "^2.3.0"
