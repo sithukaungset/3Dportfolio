@@ -4,114 +4,104 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sithu's Website</title>
+    <title>Sithu KaungSet — Road to AGI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
+    <canvas id="bg"></canvas>
 
-    <canvas id="bg"></canvas>   
-
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="cursorTrail"></canvas>
+    <nav id="navbar">
+      <a href="#hero" class="nav-brand">Sithu KaungSet</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
     <main>
-
-      <header>
-        <h1>Sithu</h1>
-        <p>🚀 Welcome to my Generative Journey!</p>
-      </header>
-
-
-      <blockquote>
-        <p>I like developing GenAI Apps and Services on Cloud</p>
-      </blockquote>
-
-      <section>
-        <h2>👽 MySelf</h2>
-        <p>
-          Solutions Architect - Generative AI (AI Engineer)
-          (Master's Degree in Computer Science)
-        </p>
-
-        <p>
-          Techie with AGI dreams
-        </p>
-          LLM, SLM, Opensource 
-        <p>
-          
-        </p>
-
+      <section id="hero" class="hero">
+        <div class="hero-content reveal">
+          <p class="hero-label">Engineer @ Microsoft</p>
+          <h1 class="hero-title">Road to<br><em>AGI</em></h1>
+          <p class="hero-sub">Solutions Architect · Generative AI · Cloud Infrastructure</p>
+        </div>
+        <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
       </section>
-
-      <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
-
-        <p>
-          Shop Block (AI Engineer)
-        </p>
-        <p>  
-          Healer (Decentralized Web 3.0 Medical AI Healthcare Service Platform)
-        </p>
-        <p> 
-          Gym Bro (Android Application for Gym Bros)
-        </p>
-        <p> 
-          Smart Health (Android Application for Insomnia)
-        </p>
-        <p> 
-          AI for Blockchain (SVM based Peer Set Selection Mechanism for Private Blockchain)
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Bachelor of Science in Computer Engineering
-        </p>
-
-        <p>
-          Master of Science in Computer Engineering
-        </p>
-
+      <section id="about" class="section-block">
+        <div class="section-header reveal"><span class="label">About</span></div>
+        <div class="about-content">
+          <div class="about-photo reveal">
+            <div class="photo-frame"><img src="sithu.jpeg" alt="Sithu KaungSet" /></div>
+          </div>
+          <div class="about-text reveal">
+            <h2>Building the future with AI & Cloud</h2>
+            <p>Tech Support Engineer (Azure PaaS Dev) at <strong>Microsoft</strong> in Seoul. Focused on Azure API Management, AI Search, Service Bus, Storage, Event Hub, and Redis.</p>
+            <p>Previously Azure OpenAI Solutions Architect at <strong>MegazoneCloud</strong>, building enterprise GenAI for KB Finance, Shinhan Card, Hyundai, POSCO.</p>
+            <p>Master's in CS, Dongguk University. Published in IEEE Transactions on Services Computing.</p>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-txt">Years in AI & Cloud</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-txt">Publications</span></div>
+          <div class="stat"><span class="stat-num">7+</span><span class="stat-txt">Microsoft Certs</span></div>
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-txt">Enterprise Projects</span></div>
+        </div>
       </section>
-
-      <blockquote>
-        <p>The best way to predict the future is to create it. <br>-Peter F. Drucker</p>
-      </blockquote>
-
-      <section class="left">
-        <h2> Project History</h2>
-
-        <h3>Efficient Message Forwarding and Consensus Path Optimization in Blockchain Networks through Advanced Network Protocol Technologies</h3>
-        <p>
-          Software Engineer (Machine Learning, Blockchain developer)
-        </p>
-        <h3>Development of blockchain technology for wireless terminals, aimed at ultra-low latency 5G services</h3>
-        <p>
-          Software Engineer (Blockchain Consensus, DApp, Smart contract developer)
-        </p>
-
+      <!-- GALLERY -->
+      <section class="gallery-section">
+        <div class="gallery-header reveal"><span class="label">Moments</span></div>
+        <div class="gallery-track">
+          <div class="gallery-item reveal"><img src="KCC.JPG" alt="Azure OpenAI Workshop" /><span>Azure OpenAI Workshop</span></div>
+          <div class="gallery-item reveal"><img src="mando.PNG" alt="Hyundai HL Mando" /><span>Hyundai HL Mando Seminar</span></div>
+          <div class="gallery-item reveal"><img src="Poscos.jpg" alt="POSCO Training" /><span>Azure AI Training — POSCO</span></div>
+          <div class="gallery-item reveal"><img src="KCC3.jpg" alt="Workshop Team" /><span>MegazoneCloud × Microsoft</span></div>
+          <div class="gallery-item reveal"><img src="KCC2.jpg" alt="Enterprise Workshop" /><span>Enterprise AI Workshop</span></div>
+          <div class="gallery-item reveal"><img src="KCC1.JPG" alt="KCC Workshop" /><span>Azure AI Studio — KCC</span></div>
+          <div class="gallery-item reveal"><img src="KCC4.jpg" alt="Microsoft Security" /><span>Microsoft AI Security Workshop</span></div>
+          <div class="gallery-item reveal"><img src="KCC5.jpg" alt="Training Session" /><span>GenAI Training Session</span></div>
+          <div class="gallery-item reveal"><img src="Psocos1.jpg" alt="POSCO Azure AI" /><span>POSCO Azure AI Studio</span></div>
+          <div class="gallery-item reveal"><img src="MS_trophy.jpg" alt="Microsoft Awards" /><span>Microsoft Circle of Excellence</span></div>
+        </div>
       </section>
-
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
-
-
+      <section class="statement-block">
+        <h2 class="statement reveal">I build AI-powered systems at the intersection of <em>cloud infrastructure</em> and <em>generative intelligence</em>.</h2>
+      </section>
+      <section id="work" class="section-block">
+        <div class="section-header reveal"><span class="label">Selected Work</span></div>
+        <div class="work-grid">
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">01</span><h3>Multimodal RAG Avatar</h3><p>RAG pipeline with semantic chunking, Azure Document Intelligence, TTS Avatar, fine-tuned phi-3 mini.</p><div class="work-tags"><span>Azure AI Studio</span><span>RAG</span><span>TTS Avatar</span></div></div></div>
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">02</span><h3>MegaChat Enterprise</h3><p>Enterprise chatbot with LangChain, GPT-4, Azure AI Search, and Cosmos DB.</p><div class="work-tags"><span>LangChain</span><span>GPT-4</span><span>Cosmos DB</span></div></div></div>
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">03</span><h3>AI for Blockchain</h3><p>ML-driven consensus optimization and SVM-based peer selection for private blockchain.</p><div class="work-tags"><span>Machine Learning</span><span>Blockchain</span><span>5G</span></div></div></div>
+        </div>
+      </section>
+      <section id="credentials" class="section-block">
+        <div class="section-header reveal"><span class="label">Credentials</span></div>
+        <div class="cred-list">
+          <div class="cred-row reveal"><span class="cred-year">2022</span><div class="cred-info"><h4>Service-Aware Dynamic Sharding for Scalable Blockchain</h4><p>IEEE Transactions on Services Computing — JIF Rank 2 in CS</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2021</span><div class="cred-info"><h4>ML-based Endorsing Peer Set Selection for Blockchain</h4><p>Korean Institute of Communications and Information Sciences</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2023</span><div class="cred-info"><h4>HealthAI: AI-Based Approach for Healthcare</h4><p>MSc Thesis — Dongguk University</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2024</span><div class="cred-info"><h4>Microsoft Certifications</h4><p>Azure OpenAI & Semantic Kernel · AI Document Intelligence · Azure AI Language NLP</p></div></div>
+        </div>
+      </section>
+      <footer id="contact" class="footer">
+        <div class="footer-inner reveal">
+          <h2>Let's create<br><em>something extraordinary</em></h2>
+          <div class="footer-links">
+            <a href="https://github.com/sithukaungset" target="_blank">GitHub</a>
+            <a href="mailto:sithukaungset27@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/sithukaungset" target="_blank">LinkedIn</a>
+          </div>
+          <p class="footer-copy">© 2026 Sithu KaungSet · Seoul, South Korea</p>
+        </div>
+      </footer>
     </main>
-    
     <script type="module" src="/main.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </body>
 </html>
