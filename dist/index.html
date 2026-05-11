@@ -2,119 +2,240 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/3Dportfolio/assets/favicon.17e50649.svg" />
+    <link rel="icon" type="image/svg+xml" href="/3Dportfolio/assets/favicon-OtBKyZol.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sithu's Website</title>
-  <script type="module" crossorigin src="/3Dportfolio/assets/index.0dcf519d.js"></script>
-  <link rel="modulepreload" href="/3Dportfolio/assets/vendor.37082f73.js">
-  <link rel="stylesheet" href="/3Dportfolio/assets/index.bbb3b78f.css">
-</head>
+    <title>Sithu KaungSet — Road to AGI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/3Dportfolio/assets/index-BzWiUCCm.js"></script>
+    <link rel="stylesheet" crossorigin href="/3Dportfolio/assets/index-BX7wDPUA.css">
+  </head>
   <body>
+    <canvas id="bg"></canvas>
 
-    <canvas id="bg"></canvas>   
-
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="cursorTrail"></canvas>
+    <nav id="navbar">
+      <a href="#hero" class="nav-brand">Sithu KaungSet</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
     <main>
-
-      <header>
-        <h1>Sithu</h1>
-        <p>🚀 Welcome to my website!</p>
-      </header>
-
-
-      <blockquote>
-        <p>I like developing fun things and solving problems</p>
-      </blockquote>
-
-      <section>
-        <h2>👽 MySelf</h2>
-        <p>
-          Blockchain Developer and Software Engineer
-          (Computer Science Graduate Student)
-        </p>
-
-        <p>
-          Techie
-        </p>
-          Big Nerd with Big muscles
-        <p>
-          
-        </p>
-
+      <section id="hero" class="hero">
+        <div class="hero-content reveal">
+          <p class="hero-label">Engineer @ Microsoft</p>
+          <h1 class="hero-title">Road to<br><em>AGI</em></h1>
+          <p class="hero-sub">Solutions Architect · Generative AI · Cloud Infrastructure</p>
+        </div>
+        <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
       </section>
-
-      <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
-
-        <p>
-          Shop Block (Blockchain-based E-Commerce Platform)
-        </p>
-        <p>  
-          Healer (Decentralized Web 3.0 Medical AI Healthcare Service Platform)
-        </p>
-        <p> 
-          Gym Bro (Android Application for Gym Bros)
-        </p>
-        <p> 
-          Smart Health (Android Application for Insomnia)
-        </p>
-        <p> 
-          AI for Blockchain (SVM based Peer Set Selection Mechanism for Private Blockchain)
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Nothing yet LOL
-        </p>
-
+      <section id="about" class="section-block">
+        <div class="section-header reveal"><span class="label">About</span></div>
+        <div class="about-content">
+          <div class="about-photo reveal">
+            <div class="photo-frame"><img src="/3Dportfolio/assets/sithu-DjXa378S.jpeg" alt="Sithu KaungSet" /></div>
+          </div>
+          <div class="about-text reveal">
+            <h2>Building the future with AI & Cloud</h2>
+            <p>Tech Support Engineer (Azure PaaS Dev) at <strong>Microsoft</strong> in Seoul. Focused on Azure API Management, AI Search, Service Bus, Storage, Event Hub, and Redis.</p>
+            <p>Previously Azure OpenAI Solutions Architect at <strong>MegazoneCloud</strong>, building enterprise GenAI for KB Finance, Shinhan Card, Hyundai, POSCO.</p>
+            <p>Master's in CS, Dongguk University. Published in IEEE Transactions on Services Computing.</p>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-txt">Years in AI & Cloud</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-txt">Publications</span></div>
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-txt">Certifications</span></div>
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-txt">Enterprise Projects</span></div>
+        </div>
       </section>
-
-      <blockquote>
-        <p>The best way to predict the future is to create it. <br>-Peter F. Drucker</p>
-      </blockquote>
-
-      <section class="left">
-        <h2>🌮 Work History</h2>
-
-        <h3>McDonalds</h3>
-        <p>
-          Software Developer and Blockchain Developer
-        </p>
-        <h3>Burger King</h3>
-        <p>
-          Flipping Whoppers and French Fries
-        </p>
-        <h3>Taco Bell</h3>
-        <p>
-          Everyday is Taco Tuesday !!!
-        </p>
-
+      <!-- GALLERY -->
+      <section class="gallery-section">
+        <div class="gallery-header reveal"><span class="label">Moments</span></div>
+        <div class="gallery-track">
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/Seminar-DZeaaVxZ.jpg" alt="Azure OpenAI Workshop" /><span>Azure OpenAI Workshop, Microsoft Korea</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/MTC-BDS8j_sK.jpg" alt="Microsoft Technology Center" /><span>Microsoft Technology Center, Korea</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/kakao-DjZ8B5HC.jpg" alt="Kakao GenAI Seminar" /><span>Kakao GenAI Seminar × Microsoft</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/KB-B_ls0SYk.jpg" alt="KB Finance Workshop" /><span>KB Finance Group GenAI Workshop</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/AWS1-DQf8qnXs.jpg" alt="AWS Summit Seoul" /><span>AWS Bedrock, AWS Summit Seoul</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/AWS2-esFyTumu.jpg" alt="AWS Summit" /><span>AWS Summit Seoul</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/SMB1-BEmkOVhA.jpg" alt="Azure OpenAI Enterprise" /><span>Azure OpenAI for Korean Enterprises</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/SMB_workshop-DP0rd37n.jpg" alt="SMB Workshop" /><span>Azure OpenAI Enterprise Workshop</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/Shinhan-Bgm3EkyZ.jpg" alt="Shinhan Card" /><span>Shinhan Card Multi-Cloud GenAI</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/HLmando-DpDGGXCr.jpg" alt="Hyundai HL Mando" /><span>Hyundai HL Mando Azure OpenAI</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/KCC-DtMo41fm.JPG" alt="KCC Training" /><span>Azure AI Studio Training — KCC</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/MS_Secuity-DB_HnYkL.jpg" alt="Microsoft Security" /><span>Microsoft AI Security Workshop</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/Megazone_MS-CxMoKYAY.jpg" alt="Megazone Microsoft" /><span>Azure OpenAI — MegazoneCloud × Microsoft</span></div>
+          <div class="gallery-item reveal"><img src="/3Dportfolio/assets/Poscos-B4cv0HeJ.jpg" alt="POSCO Azure AI" /><span>Azure AI Studio Training — POSCO</span></div>
+        </div>
       </section>
+      <section class="statement-block">
+        <h2 class="statement reveal">I build AI-powered systems at the intersection of <em>cloud infrastructure</em> and <em>generative intelligence</em>.</h2>
+      </section>
+      <section id="work" class="section-block">
+        <div class="section-header reveal"><span class="label">Selected Work</span></div>
+        <div class="work-grid">
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">01</span><h3>Multimodal RAG Avatar</h3><p>RAG pipeline with semantic chunking, Azure Document Intelligence, TTS Avatar, fine-tuned phi-3 mini.</p><div class="work-tags"><span>Azure AI Studio</span><span>RAG</span><span>TTS Avatar</span></div></div></div>
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">02</span><h3>MegaChat Enterprise</h3><p>Enterprise chatbot with LangChain, GPT-4, Azure AI Search, and Cosmos DB.</p><div class="work-tags"><span>LangChain</span><span>GPT-4</span><span>Cosmos DB</span></div></div></div>
+          <div class="work-card reveal"><div class="work-card-inner"><span class="work-num">03</span><h3>AI for Blockchain</h3><p>ML-driven consensus optimization and SVM-based peer selection for private blockchain.</p><div class="work-tags"><span>Machine Learning</span><span>Blockchain</span><span>5G</span></div></div></div>
+        </div>
+      </section>
+      <section id="credentials" class="section-block">
+        <div class="section-header reveal"><span class="label">Publications</span></div>
 
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
+        <div class="pub-featured">
+          <div class="pub-card reveal">
+            <div class="pub-img"><img src="/3Dportfolio/assets/IEEEPaper-CGGKOlXM.png" alt="IEEE Paper" /></div>
+            <div class="pub-content">
+              <span class="pub-badge">IEEE TSC · 2022</span>
+              <h3>Service-Aware Dynamic Sharding Approach for Scalable Blockchain</h3>
+              <p>Published in IEEE Transactions on Services Computing — JIF Rank 2 in Computer Science and Software Engineering</p>
+            </div>
+          </div>
+          <div class="pub-card reveal">
+            <div class="pub-img"><img src="/3Dportfolio/assets/MLPaper-C5wFH_ho.png" alt="ML Paper" /></div>
+            <div class="pub-content">
+              <span class="pub-badge">KICS · 2021</span>
+              <h3>ML-based Endorsing Peer Set Selection Scheme for Scalable Blockchain over Wireless Networks</h3>
+              <p>Published in Korean Institute of Communications and Information Sciences Fall Conference</p>
+            </div>
+          </div>
+          <div class="pub-card reveal">
+            <div class="pub-img"><img src="/3Dportfolio/assets/HealthAI-DV7golDb.png" alt="HealthAI" /></div>
+            <div class="pub-content">
+              <span class="pub-badge">MSc Thesis · 2023</span>
+              <h3>HealthAI: AI-Based Approach for Improved Healthcare Services</h3>
+              <p>Published as MSc Thesis — Dongguk University</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="section-header reveal" style="margin-top:4rem"><span class="label">National Research Foundation of Korea</span></div>
+        <div class="pub-featured">
+          <div class="pub-card reveal">
+            <div class="pub-img"><img src="/3Dportfolio/assets/PBFT-Project-D5-gDEm0.png" alt="PBFT Blockchain Project" /></div>
+            <div class="pub-content">
+              <span class="pub-badge">NRF Korea · ML & Blockchain</span>
+              <h3>Efficient Message Forwarding and Consensus Path Optimization in Blockchain Networks</h3>
+              <p>Machine Learning and Blockchain Researcher — Deep Neural Networks and Blockchain. Advanced network protocol technologies for ML-driven message forwarding and consensus path optimization.</p>
+            </div>
+          </div>
+          <div class="pub-card reveal">
+            <div class="pub-img"><img src="/3Dportfolio/assets/5G-Blockchain-BM97zKzJ.png" alt="5G Blockchain Project" /></div>
+            <div class="pub-content">
+              <span class="pub-badge">NRF Korea · 5G & Blockchain</span>
+              <h3>Development of Blockchain Technology for Wireless Terminals — Ultra-Low Latency 5G Services</h3>
+              <p>Machine Learning and Blockchain Researcher — Neural Networks, Consensus mechanisms, Smart Contracts, and DApps for enhancing blockchain technology in 5G networks.</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="section-header reveal" style="margin-top:4rem"><span class="label">Microsoft Certifications</span></div>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AOAI-Ba9ZFaMH.png" alt="Azure OpenAI" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2026</span>
+              <h4>Agentic AI Business Solutions Architect</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AzureNLP-DElM3saB.png" alt="Azure AI" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2026</span>
+              <h4>Azure AI Engineer Associate</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/SemanticKernel-DkY4KDyB.png" alt="Semantic Kernel" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2026</span>
+              <h4>M365 Copilot & Agent Administration</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AzureDI-z6B6v4bM.png" alt="Azure DI" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2025</span>
+              <h4>Azure AI Fundamentals</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AOAI-Ba9ZFaMH.png" alt="GenAI" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2024</span>
+              <h4>Generative AI with Azure OpenAI Service</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/SemanticKernel-DkY4KDyB.png" alt="AI Agents" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2024</span>
+              <h4>AI Agents with Azure OpenAI & Semantic Kernel</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AzureNLP-DElM3saB.png" alt="NLP" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2024</span>
+              <h4>Azure AI Language NLP</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <img src="/3Dportfolio/assets/AzureDI-z6B6v4bM.png" alt="Document Intelligence" />
+            <div class="cert-info">
+              <span class="cert-year-tag">2024</span>
+              <h4>Azure AI Document Intelligence</h4>
+              <p>Microsoft Certified</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cred-list" style="margin-top:2rem">
+          <div class="cred-row reveal"><span class="cred-year">2025</span><div class="cred-info"><h4>Microsoft Global Hackathon 2025</h4><p>Microsoft · Jul 2025</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2024</span><div class="cred-info"><h4>Copilot for Microsoft 365 Technical Champion</h4><p>Microsoft · May 2024</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2024</span><div class="cred-info"><h4>Accelerating AI Solutions Bootcamp · RAG Hack 2024 · Agent Copilot Training</h4><p>Microsoft · Sep–Dec 2024</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2025</span><div class="cred-info"><h4>Career Essentials in Generative AI</h4><p>Microsoft & LinkedIn · Jan 2025</p></div></div>
+        </div>
+
+        <div class="section-header reveal" style="margin-top:4rem"><span class="label">Technical Assessments</span></div>
+        <div class="cred-list">
+          <div class="cred-row reveal"><span class="cred-year">2025–26</span><div class="cred-info"><h4>Azure Developer — APIM · ARM · Service Bus · Event Hub · Event Grid · Storage · Service Fabric · Azure Search</h4><p>QA Ltd · L100 Foundational & L200 Specialist Assessments</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2025</span><div class="cred-info"><h4>Azure Policy (L200) · Career Essentials in Generative AI</h4><p>QA Ltd · Microsoft & LinkedIn</p></div></div>
+          <div class="cred-row reveal"><span class="cred-year">2023</span><div class="cred-info"><h4>Python Data Science</h4><p>TestDome Certified</p></div></div>
+        </div>
+      </section>
+      <footer id="contact" class="footer">
+        <div class="footer-inner reveal">
+          <h2>Let's create<br><em>something extraordinary</em></h2>
+          <div class="footer-links">
+            <a href="https://github.com/sithukaungset" target="_blank">GitHub</a>
+            <a href="mailto:sithukaungset27@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/sithukaungset" target="_blank">LinkedIn</a>
+          </div>
+          <p class="footer-copy">© 2026 Sithu KaungSet · Seoul, South Korea</p>
+        </div>
+      </footer>
     </main>
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-close" id="lightboxClose">✕</div>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
 
   </body>
 </html>
