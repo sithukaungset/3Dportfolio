@@ -322,6 +322,23 @@ const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isI
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 
+// ===== LIGHTBOX =====
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+document.querySelectorAll('.gallery-item img, .pub-img img, .cert-card img, .photo-frame img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('active');
+  });
+});
+
+lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('active'); });
+
 // ===== FUTURISTIC AI CURSOR =====
 const cursorDot = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');

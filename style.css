@@ -184,6 +184,63 @@ main{position:relative;z-index:10}
 .work-tags{display:flex;flex-wrap:wrap;gap:.5rem}
 .work-tags span{font-family:'Outfit',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);padding:.35rem .9rem;border:1px solid rgba(0,229,255,.2)}
 
+/* PUBLICATIONS — featured cards with images */
+.pub-featured{display:flex;flex-direction:column;gap:2rem;margin-bottom:4rem}
+.pub-card{
+  display:grid;grid-template-columns:380px 1fr;gap:2.5rem;
+  border:1px solid rgba(232,54,79,.1);
+  padding:0;overflow:hidden;transition:all .5s ease;position:relative;
+}
+.pub-card::before{
+  content:'';position:absolute;top:0;left:0;width:3px;height:100%;
+  background:linear-gradient(180deg,var(--accent2),var(--red));opacity:0;transition:opacity .4s;
+}
+.pub-card:hover{border-color:rgba(0,229,255,.2);transform:translateY(-3px)}
+.pub-card:hover::before{opacity:1}
+.pub-img{overflow:hidden;height:100%;min-height:240px}
+.pub-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.85);transition:all .5s}
+.pub-card:hover .pub-img img{filter:brightness(1);transform:scale(1.03)}
+.pub-content{padding:2rem 2rem 2rem 0;display:flex;flex-direction:column;justify-content:center}
+.pub-badge{
+  display:inline-block;width:fit-content;
+  font-family:'Outfit',sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--bg);background:linear-gradient(135deg,var(--accent2),var(--accent));
+  padding:.35rem .9rem;margin-bottom:1rem;
+}
+.pub-content h3{
+  font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;
+  line-height:1.4;margin-bottom:.8rem;letter-spacing:.01em;
+}
+.pub-content p{font-size:.9rem;color:var(--grey);line-height:1.6}
+
+@media(max-width:768px){
+  .pub-card{grid-template-columns:1fr}
+  .pub-img{min-height:160px}
+  .pub-content{padding:1.5rem}
+}
+
+/* CERT GRID — image cards */
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,229,255,.04)}
+.cert-card{background:var(--bg);overflow:hidden;transition:all .5s;position:relative}
+.cert-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent));opacity:0;transition:opacity .4s}
+.cert-card:hover{background:rgba(0,229,255,.03)}
+.cert-card:hover::after{opacity:1}
+.cert-card img{width:100%;height:160px;object-fit:cover;filter:brightness(.75);transition:all .5s}
+.cert-card:hover img{filter:brightness(1);transform:scale(1.03)}
+.cert-info{padding:1.2rem}
+.cert-year-tag{
+  font-family:'Outfit',sans-serif;font-size:.55rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--accent2);
+}
+.cert-info h4{font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;margin-top:.4rem;line-height:1.35}
+.cert-info p{font-size:.75rem;color:var(--grey);margin-top:.3rem}
+
+@media(max-width:768px){
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .cert-card img{height:120px}
+}
+
 /* CREDENTIALS */
 .cred-list{border-top:1px solid rgba(232,54,79,.1)}
 .cred-row{
@@ -220,6 +277,31 @@ main{position:relative;z-index:10}
   75%{text-shadow:-1px 2px var(--red),1px -1px var(--accent2)}
   100%{text-shadow:none}
 }
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;top:0;left:0;width:100%;height:100%;z-index:20000;
+  background:rgba(0,0,0,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .4s ease;
+}
+.lightbox.active{opacity:1;pointer-events:all}
+.lightbox img{
+  max-width:90vw;max-height:85vh;object-fit:contain;
+  border:1px solid rgba(0,229,255,.15);
+  box-shadow:0 0 60px rgba(0,229,255,.08);
+  transform:scale(.9);transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.lightbox.active img{transform:scale(1)}
+.lightbox-close{
+  position:absolute;top:2rem;right:2.5rem;
+  font-family:'Outfit',sans-serif;font-size:1.5rem;color:var(--grey);
+  cursor:pointer;transition:color .3s;z-index:20001;
+}
+.lightbox-close:hover{color:var(--white)}
+
+/* Make images clickable */
+.gallery-item img,.pub-img img,.cert-card img,.photo-frame img{cursor:pointer}
 
 /* RESPONSIVE */
 @media(max-width:768px){
