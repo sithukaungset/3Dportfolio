@@ -95,7 +95,7 @@ main{position:relative;z-index:10}
 }
 .section-header{margin-bottom:4rem;display:flex;align-items:center;gap:1.5rem}
 .section-header::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.06)}
-.label{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--red);white-space:nowrap}
+.label{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);white-space:nowrap;text-shadow:0 0 15px rgba(232,54,79,.3)}
 
 /* ABOUT */
 .about-content{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;margin-bottom:5rem;align-items:start}
