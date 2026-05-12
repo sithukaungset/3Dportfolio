@@ -227,6 +227,17 @@ main{position:relative;z-index:10}
 .story-card::before{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent2),var(--red));opacity:0;transition:opacity .4s}
 .story-card:hover{background:rgba(0,229,255,.02);padding-left:3rem}
 .story-card:hover::before{opacity:1}
+.story-header{display:flex;align-items:center;margin-bottom:.8rem}
+.story-icon{
+  font-size:2rem;margin-bottom:.8rem;
+  filter:drop-shadow(0 0 8px rgba(0,229,255,.3));
+}
+.story-logo{
+  width:28px;height:28px;object-fit:contain;
+  border-radius:6px;background:rgba(255,255,255,.9);
+  padding:3px;display:inline-block;vertical-align:middle;margin-right:.6rem;
+  filter:drop-shadow(0 0 6px rgba(0,229,255,.2));
+}
 .story-badge{
   font-family:'Outfit',sans-serif;font-size:.55rem;font-weight:700;
   letter-spacing:.15em;text-transform:uppercase;
@@ -263,7 +274,7 @@ main{position:relative;z-index:10}
   font-family:'Outfit',sans-serif;font-size:.6rem;font-weight:700;
   letter-spacing:.15em;text-transform:uppercase;
   color:var(--bg);background:linear-gradient(135deg,var(--accent2),var(--accent));
-  padding:.35rem .9rem;margin-bottom:1rem;
+  padding:.35rem .9rem;vertical-align:middle;
 }
 .pub-content h3{
   font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;
