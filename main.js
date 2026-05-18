@@ -339,6 +339,89 @@ lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('active'); });
 
+// ===== AI CHATBOT (Azure Function Proxy) =====
+const CHAT_API = 'https://sithu-portfolio-ai.azurewebsites.net/api/chat';
+
+const chatToggle = document.getElementById('chatToggle');
+const chatbot = document.getElementById('chatbot');
+const chatClose = document.getElementById('chatClose');
+const chatInput = document.getElementById('chatInput');
+const chatSend = document.getElementById('chatSend');
+const chatMessages = document.getElementById('chatMessages');
+const chatSuggestions = document.getElementById('chatSuggestions');
+
+let chatHistory = [];
+
+chatToggle.addEventListener('click', () => {
+  chatbot.classList.add('open');
+  chatToggle.classList.add('hidden');
+  chatInput.focus();
+});
+chatClose.addEventListener('click', () => {
+  chatbot.classList.remove('open');
+  chatToggle.classList.remove('hidden');
+});
+
+function addMessage(text, isUser) {
+  const msg = document.createElement('div');
+  msg.className = `chat-msg ${isUser ? 'user' : 'bot'}`;
+  msg.innerHTML = `<span class="chat-avatar">${isUser ? '👤' : '🤖'}</span><div class="chat-bubble">${text}</div>`;
+  chatMessages.appendChild(msg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function showTyping() {
+  const typing = document.createElement('div');
+  typing.className = 'chat-msg bot';
+  typing.id = 'typingIndicator';
+  typing.innerHTML = `<span class="chat-avatar">🤖</span><div class="chat-bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+  chatMessages.appendChild(typing);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typingIndicator');
+  if (t) t.remove();
+}
+
+async function sendMessage(text) {
+  if (!text.trim()) return;
+  addMessage(text, true);
+  chatInput.value = '';
+  chatSuggestions.style.display = 'none';
+  showTyping();
+
+  chatHistory.push({ role: 'user', content: text });
+
+  try {
+    const res = await fetch(CHAT_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: chatHistory })
+    });
+
+    const data = await res.json();
+    removeTyping();
+
+    if (data.choices && data.choices[0]) {
+      const reply = data.choices[0].message.content;
+      chatHistory.push({ role: 'assistant', content: reply });
+      addMessage(reply, false);
+    } else {
+      addMessage('Hmm, something went wrong. Try again! ⚡', false);
+    }
+  } catch (err) {
+    removeTyping();
+    addMessage('Connection error — please try again later. 🔌', false);
+  }
+}
+
+chatSend.addEventListener('click', () => sendMessage(chatInput.value));
+chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(chatInput.value); });
+chatSuggestions.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => sendMessage(btn.dataset.q));
+});
+
 // ===== FUTURISTIC AI CURSOR =====
 const cursorDot = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');
@@ -380,7 +463,7 @@ if (cursorDot && cursorRing && tCtx) {
 
   addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
 
-  document.querySelectorAll('a, .work-card, .cred-row, .photo-frame').forEach(el => {
+  document.querySelectorAll('a, .work-card, .cred-row, .photo-frame, .chatbot-toggle, .chat-close, .chat-suggestions button, .chat-input-row button, .gallery-item').forEach(el => {
     el.addEventListener('mouseenter', () => { cursorDot.classList.add('hover'); cursorRing.classList.add('hover'); });
     el.addEventListener('mouseleave', () => { cursorDot.classList.remove('hover'); cursorRing.classList.remove('hover'); });
   });

@@ -280,7 +280,7 @@
       </section>
       <!-- GALLERY -->
       <section class="gallery-section">
-        <div class="gallery-header reveal"><span class="label">Moments</span></div>
+        <div class="gallery-header reveal"><span class="label">Moments — Previous</span></div>
         <div class="gallery-track">
           <div class="gallery-item reveal" data-index="01"><img src="Seminar.jpg" alt="Azure OpenAI Workshop" /><span>Azure OpenAI Workshop, Microsoft Korea</span></div>
           <div class="gallery-item reveal" data-index="02"><img src="MTC.jpg" alt="Microsoft Technology Center" /><span>Microsoft Technology Center, Korea</span></div>
@@ -294,6 +294,17 @@
           <div class="gallery-item reveal" data-index="10"><img src="KCC.JPG" alt="KCC Training" /><span>Azure AI Studio Training — KCC</span></div>
           <div class="gallery-item reveal" data-index="11"><img src="Megazone_MS.jpg" alt="Megazone Microsoft" /><span>Azure OpenAI — MegazoneCloud × Microsoft</span></div>
           <div class="gallery-item reveal" data-index="12"><img src="Poscos.jpg" alt="POSCO Azure AI" /><span>Azure AI Studio Training — POSCO</span></div>
+        </div>
+      </section>
+
+      <!-- MICROSOFT KOREA PRESENTATIONS -->
+      <section class="gallery-section">
+        <div class="gallery-header reveal"><span class="label">Moments — Microsoft Korea</span></div>
+        <div class="gallery-track">
+          <!-- Add your Microsoft Korea presentation photos here -->
+          <!-- Example format:
+          <div class="gallery-item reveal" data-index="01"><img src="YOUR_PHOTO.jpg" alt="Description" /><span>Presentation Title</span></div>
+          -->
         </div>
       </section>
 
@@ -316,7 +327,46 @@
       <img id="lightboxImg" src="" alt="" />
     </div>
 
+    <!-- AI Chatbot -->
+    <div class="chatbot-toggle" id="chatToggle">
+      <span class="chat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 2L10.3 5.7L14 7L10.3 8.3L9 12L7.7 8.3L4 7L7.7 5.7L9 2Z" fill="currentColor"/><path d="M18 8L18.9 10.1L21 11L18.9 11.9L18 14L17.1 11.9L15 11L17.1 10.1L18 8Z" fill="currentColor"/><path d="M15 16L15.6 17.4L17 18L15.6 18.6L15 20L14.4 18.6L13 18L14.4 17.4L15 16Z" fill="currentColor"/><rect x="3" y="19" width="12" height="2.5" rx="1.25" fill="currentColor"/></svg></span>
+    </div>
+    <div class="chat-label">Ask AI</div>
+    <div class="chatbot" id="chatbot">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <span class="chat-status"></span>
+          <span class="chat-title">ASI · AI Assistant</span>
+        </div>
+        <div class="chat-header-right">
+          <span class="chat-model">GPT-4o</span>
+          <span class="chat-close" id="chatClose">✕</span>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot">
+          <span class="chat-avatar">🤖</span>
+          <div class="chat-bubble">
+            <div class="chat-bot-name">ASI · Neural Core</div>
+            Hey! I'm Sithu's AI assistant, powered by Azure OpenAI. Ask me anything about his skills, projects, or experience at Microsoft! ⚡
+          </div>
+        </div>
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button data-q="What does Sithu do?">What does Sithu do?</button>
+        <button data-q="Tell me about his Microsoft work">Microsoft work</button>
+        <button data-q="What are his skills?">Skills</button>
+        <button data-q="Tell me about his publications">Publications</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Ask me anything..." autocomplete="off" />
+        <button id="chatSend">→</button>
+      </div>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
+
 
